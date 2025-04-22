@@ -1,0 +1,413 @@
+/* 顶部和底部 公共样式专用 */
+/*
+时间起：2020.04.29
+时间止：2020.05.02
+创作人：飞鱼
+
+*/
+
+/* 清除一下标签的默认倾斜和下划线的样式 */
+body,div,h1,h2,h3,h4,h5,h6,
+ol,ul,s,i,img,li,td,tr,hr,
+p,span,u {
+	margin: 0;
+	padding:0;
+	font-style: normal;
+	list-style: none;
+}
+
+/* 设置字体图标样式
+不需要详细认识该内容，需要用的时候直接复制就行，
+重要：fonts文件必须要单独放在根目录，否则无法调用，谨记*/
+
+@font-face {	/*声明字体，引用字体*/
+  font-family: 'icomoon';	/*定义字体，这里定义，后面引用*/
+  src:  url('../fonts/icomoon.eot?on6j29');	/*路径： 文件名，文件，匹配IE*/
+  src:  url('../fonts/icomoon.eot?on6j29#iefix') format('embedded-opentype'),
+url('../fonts/icomoon.ttf?on6j29') format('truetype'),
+url('../fonts/icomoon.woff?on6j29') format('woff'),
+url('../fonts/icomoon.svg?on6j29#icomoon') format('svg');
+/*以上几行代码为设置字体的几种模式 ，不过多赘述*/
+  font-weight: normal;	/*取消文字粗体*/
+  font-style: normal;	
+ /*取消倾斜，因为字体图标常用<i>标签承载，i自带倾斜，所以在初始化中会设置清除*/
+}
+
+/* 版心设置 */
+.w {
+	width: 1000px;
+	margin: 0 auto;
+}
+.dw {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	top: -11px;
+	left: 10px;
+	border: 1px solid red;
+}
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+/* 顶部区域开始了 */
+
+/* 大盒子的样式 */
+
+body .top {
+	height: 100px;	/* 大盒子的高度 */
+	/* border: 1px solid red; */
+	box-sizing: border-box;	/* 解决因盒子内的数值而撑大盒子的影响 */
+	margin-top: 10px;	/* 距上一盒子的底部距离 */
+	overflow: hidden;	/* 溢出隐藏 */
+}
+div .top-logo {
+	float: left;	/* 左浮动 */
+	width: 200px;	/* 宽度为200像素 */
+	display: flex;	/* 开启弹性盒模式 */
+}
+.top-logo p {
+	margin-left: -999px;	/* 不需要的内容，需要超出盒子，然后配合溢出隐藏使用 */
+	overflow: hidden;	/* 溢出隐藏 */
+}
+.top-logo img {
+	width: 100px;	/* 宽度 */
+	margin-top: -44px;
+}
+.top-logo .t img {
+	width: 200px;
+	margin: 18px 0 0 22px;	/* 外边距 */
+}
+/* 左侧LOGO部分完结 */
+
+/* 右侧展示模块开始 */
+.top-r {
+	float: right;	/* 右侧浮动 */
+	margin-top: 16px;
+} 
+.top-r .tel i {
+	font-family: 'icomoon';	/* 引用字体图标 */
+	font-style: normal;	/* 取消倾斜*/
+	font-size: 40px;	/* 字体大小（图标字体） */
+	margin-top: 10px;
+	position: relative;	/* 相对定位 */
+	top: 20px;
+	left: -8px;
+	color: #f10215;	/* 图标颜色 */
+}
+.top-r .tel span {
+	font-size: 22px;
+	color: #f10215;
+	font-weight: 600;	/* 字体样式-加粗 */
+}
+.top-r  s {
+	text-decoration: none;	/* 取消删除线样式 */
+	font-size: 18px;	/* 字体大小 */
+	text-align: center;	/* 文本对齐方式-居中 */
+	line-height: 34px;	/* 行高 */
+	display: block;	/* 转换为块级元素*/
+}
+/* 顶部信息已完成 */
+
+/* 导航栏部分开始 */
+body .nav {
+	margin-top: 10px;	/* 距离上一盒子的底部距离 */
+	background-color: #2b77ea;
+	/* overflow: hidden;	溢出隐藏 针对导航栏里的内容 */
+	border-radius: 10px;	/* 圆角盒子 */
+	margin-bottom: 8px;
+	position: sticky;	/*粘性定位*/	/*该参数暂不支持UC浏览器极速模式*/
+	top: 8px;	/*距离顶部距离为8像素*/
+	z-index: 999;	/*当前层级*/
+}
+.nav ul {
+	height: 46px;
+	text-align: center;	/* ul里面的文字居中对齐 */
+	margin-left: 88px;
+}
+.nav ul li {
+	float: left;	/* 左浮动 */
+	height: 100%;	/* 继承父元素的高 */
+	list-style: none;	/* 清除默认小圆点 */
+	text-align: center;	/* 文字居中对齐 */
+	line-height: 46px;	/* 行高 */
+	margin: 0 18px;
+}
+.nav .t i {
+	font-family: 'icomoon';
+	position: relative;	/* 相对定位-相对于自身 */
+	top: -47px;
+	left: 60px;
+	display: inline-block;	/* 转换为行内块元素 */
+	font-weight: 700;
+}
+/* 业务体系隐藏拓展盒子 */
+
+
+/* 拓展业务体系的盒子-默认隐藏 */
+.nav .range {
+	width: 800px;
+	height: 308px;
+	border: 1px solid #ccc; /* 边框颜色 */	
+	position: absolute;	/* 绝对定位 */
+	top: 46px;
+	left: 110px;
+	display: none;	/* 隐藏盒子 */
+	z-index: -1;	/* 层级为-1 */
+}
+.range dl {
+	position: absolute;	/* 绝对定位 */
+	top: 0px;
+	left: 0px;
+}
+.range dl:nth-child(2) {
+	position: absolute;	/* 绝对定位 */
+	top: 0px;
+	left: 168px;
+}
+.range dl:nth-child(3) {
+	position: absolute;	/* 绝对定位 */
+	top: 0px;
+	left: 368px;
+}
+.range dl:nth-child(4) {
+	position: absolute;	/* 绝对定位 */
+	top: 0px;
+	left: 568px;
+}
+.range dl dt {
+	font-weight: 700;	/* 字体加粗 */
+	text-align: left;	/* 文字对齐方式-居左 */
+	margin-left: 1em;	/* 文本缩进1字符 */
+}
+.range dl dd {
+	margin-top: -12px;
+}
+.nav .range a {
+	width: 98px;
+	display: block;	/* 转换为块级元素 */
+	text-align: left;	/* 文本对齐方式-居左 */
+	font-weight: 400;	/* 正常字体粗细 */
+	font-size: 14px;	/* 字体大小为14像素 */
+	margin-left: 3em;	/* 字体缩进3字符 */
+}
+.range dl dt,
+.range dl dd {
+	color: #000;	/* 颜色为黑色 */
+}
+/* 当鼠标滑过隐藏业务体系标签时的样式 */
+.nav .range a:hover {
+	border: 0;	/* 干掉边框 */
+	color: #f10215;	
+	text-decoration: underline;	/* 添加下划线 */
+	font-weight: 400;
+	border-radius: 0;
+	background-color: #fff;
+}
+.nav .t:hover .range {
+	display: block;
+	background-color: #fff;
+	z-index: 1;
+} 
+
+/* 支付方式隐藏拓展盒子 */
+
+.nav #money {
+	border: 1px solid #ccc ;	
+	position: absolute;	/* 绝对定位 */
+	top: 46px;
+	/* left: px; */
+	display: flex;	/* 开启弹性盒模型 */
+	background-color: #fff;
+	z-index: -1;	/* 层级-1（正常数为0） */
+	display: none;	/* 隐藏该盒子 */
+	box-shadow: 0 2px 10px #ccc;	/* 盒子阴影 */
+	box-sizing: border-box;
+}
+
+.nav #money img {
+	width: 150px;
+	flex: 1;	/* 占据弹性盒模型的平均一份额 */
+}
+
+/* 当鼠标滑过li时，里面的伪元素图标的样式 */
+.nav .t:hover i {
+	transform: rotate(180deg);	/* 旋转180度 */
+	color: #fff;
+}
+
+.nav .t:hover #money {
+	display: block;/* 	显示隐藏的内容 */
+	z-index: 1;	/* 层级为1，显示在最上面 */
+}
+.nav li a {
+	width: 100%;
+	height: 100%;
+	display: block;	/* 转换为块级元素 */
+	font-size: 18px;
+	text-decoration: none;	/* 清除下划线 */
+	margin: 0 16px;
+	text-align: center;	/* 对齐方式-居中 */
+	color: #000;
+}
+/* 当鼠标滑过导航栏里面的a 链接的时候的样式&鼠标滑过指定a链接时，里面的#t的样式 */
+.nav li a:hover,
+.nav .t:hover #t {
+	background-color: rgb(249,104,104);	/* 背景颜色 */
+	border-radius: 19px;	/* 边框样式 */
+	color: #fff;
+	font-weight: 700;	/* 加粗 */
+}
+/* 导航栏模块end */
+
+
+
+
+
+/* 底部模块begin */
+.footer {
+	height: 100px;
+	width: 100%;
+	background-color: #999;
+	box-shadow: 0 2px 10px #ccc;	/* 盒子阴影 */
+	margin-top: 50px;
+	box-sizing: border-box;		/* 解决因盒子内的内容而引起的盒子塌陷问题 */
+}
+
+body {
+	/* background-image: url("http://www.zidanjia.com/company/skin/mfdefault/bg.jpg"); */		/* 引入图片路径 */
+	background-size: contain;	/* 背景大小-自适应背景区域的大小 */
+	background-repeat: repeat-X;	/* 平铺方式-在X横轴上铺满 */
+}
+/* 版心区域样式 */
+.footer .center {
+	height: 100%;	/* 继承父元素的高度 */
+	/* border: 1px solid red; */
+}
+/* 友情链接导航栏begin */
+.footer .nav-b {
+	height: 26px;
+	width: 100%;
+	/* border: 1px solid blue; */
+	overflow: hidden;	/* 溢出隐藏 */
+}
+
+#lianjie {
+	font-size: 13px;
+	font-weight: 600;
+	position: relative;/* 相对定位 */
+	top: 1px;
+	left: -1px;
+	color: #3a3436;
+}
+.nav-b ol {
+	margin-left: 86px;
+}
+.nav-b li {
+	float: left;	/* 左浮动 */
+}
+.nav-b li a {
+	display: block;
+	text-decoration: none;	/* 取消下划线 */
+	font-size: 12px;
+	color: #fff;
+	line-height: 26px;	/* 行高 */
+	margin: 0 22px 0;	/* 外边距 */
+}
+/* 在a后面插入伪元素 */
+.nav-b li::after {
+	content:"|";
+	font-size: 16px;
+	position: relative;
+	top: -25px;
+	left: 0px;
+	color: #5b5b5b;
+}
+/* 第一个li里面的伪元素中的内容 */
+.nav-b ol .first:after {
+	display: none;	/* 隐藏内容 */
+}
+/* 友情链接end */
+
+
+/* 公司摘要讲解begin */
+.center .summary {
+	height: 74px;
+}
+.footer .summary p{
+	font-size: 11px;
+	/* margin: 0 152px 0; */  /* 原有数据-为实验兼容其他浏览器 */
+	margin: 0 178px 0;
+	display: inline-block;
+	-webkit-letter-spacing: 2px;
+}
+.summary p:nth-child(2) {
+	/* margin-left: 318px; */
+	margin-left: 296px;
+}
+/* 公司版权内容 */
+.footer .summary .copy {
+	/* margin-left: 220px; */
+	margin-left: 170px;
+	margin-top: 6px;
+}
+.footer .copy a {
+	text-decoration: none;
+	color: #000;
+}
+
+
+
+/* 公司摘要begin */
+
+.nav-b a:hover {
+	font-weight: 600;	/* 字体加粗 */
+	color: #f10215;		/* 字体颜色 */
+	text-decoration: underline;	/* 添加下划线 */
+}
+
+/* 底部模块end */
+
+
+
+
+
+/* 电梯模块begin */
+.elevator {
+	width: 20px;
+	height: 68px;
+	background-color: #CCC; /* #2b77ea */
+	position: fixed;
+	bottom: 18px;
+	right: 18px;
+	border-radius: 8px;
+	/* cursor: pointer; */
+	transition: all 0.5s;
+}
+.elevator i {
+	font-family:'icomoon';
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	display: block;
+	margin-top: 2px;
+}
+.elevator a {
+	text-decoration: none;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	line-height: 16px;
+	color: #000;
+	/* margin-top: 16px; */
+}
+.elevator a:hover {
+	color: #2b77ea;
+}
+.elevator:hover i {
+	color: #2b77ea;
+}
+/* 电梯模块完结 */

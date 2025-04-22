@@ -1,0 +1,301 @@
+/* 成教专属样式 */
+/*
+时间起：2020.05.12
+时间止：2020.07.30
+创作人：飞鱼
+
+*/
+
+.top_img {
+	background: url("http://www.xazedu.com/images/add.jpg") ;
+}
+.top_img s {
+	letter-spacing: 6px;	/* 字间距 */
+	padding-left: 108px;
+}
+
+.top_img i {
+	margin: 13px 0 0 60px;
+	letter-spacing: 4px;	/* 字间距 */
+}
+
+
+.tab .cj {
+	width: 1000px;
+	/* border: 1px solid red; */
+	margin: auto;
+	padding-bottom: 46px;
+}
+
+.tab .cj h3 {
+	line-height: 48px;
+	font-size: 30px;
+	margin: 46px auto 8px;
+}
+.cj h4 {
+	font-size: 20px;
+	text-align: left;	/* 文本对齐方式，居左 */
+	line-height: 68px;
+	text-indent: -30px;
+}
+.cj .content{
+	line-height: 28px;
+	border: 1px solid #999;
+	margin-top: 20px;
+	border-left: 0;
+	border-right: 0;
+}
+
+.cj .content p {
+	font-size: 20px;
+	font-weight: 600;
+	text-indent: 0;
+}
+.cj .bold {
+	font-weight: 600;
+	margin: 18px 0 18px -34px ;
+}
+.cj .content div {
+	position: relative;
+	top: -2px;
+	left: -14px;
+}
+.content a {
+	display: inline-block;	/* 行内块 */
+	font-size: 16px;
+	text-align: left;
+	margin-left: 48px;
+	color: #136ec2;
+	position: relative;	/* 相定 */
+	top: -10px;
+}
+.cj .content a:hover {
+	color: #f10215;
+	font-weight: 600;
+	text-decoration: underline;	/* 添加下划线 */
+}
+
+/* 目录已完成，接下来直接填入内容即可 */
+.cj span a {
+	color: blue;
+}
+
+/* 成考自考比较表 */
+#cj caption {
+	line-height: 99px;
+}
+
+#cj th,
+#cj td {
+	font-size: 16px;
+	line-height: 38px;
+	padding: 4px 20px;
+}
+
+/* LOGO成教专属样式 */
+div.edu #LOGO {
+	top: 38px;
+	left: 28px;
+	z-index: 1;
+}
+/* 成都医学院页面样式-begin */
+.tab #yxy h3,
+.tab #CDLG h3,
+.tab #SCDX h3,
+.tab #SCNY h3,
+.tab #SCWL h3,
+.tab #SCDD h3,
+.tab #CBYXY h3 {
+	margin: -23px auto 8px;
+}
+
+
+table .xf {
+	text-indent: -10px;
+}
+table p {
+	margin-top: -24px;
+}
+
+/* 导航目录样式 */
+#yxy .content div {
+	position: relative;
+	height: 218px;
+}
+#yxy dl {
+	/* width: 200px; */
+	width: 260px;
+	text-align: left;
+}
+#yxy dl:nth-child(1) {
+	position: absolute;
+	left: 50px;
+}
+#yxy dl:nth-child(2) {
+	position: absolute;
+	top: -1px;
+	left: 200px;
+}
+#yxy dl:nth-child(3) {
+	position: absolute;
+	top: -1px;
+	left: 432px;
+}
+#yxy .content dd {
+	margin: 0px;
+}
+#yxy dd a {
+	display: block;
+	color: #000;
+	font-size: 14px;
+	text-indent: 90px;
+}
+#yxy dd a:hover,
+#yxy dt a:hover {
+	font-weight: 500;
+	color: #f01215;
+}
+#yxy dt a:hover {
+	font-weight: 600;
+}
+
+/* 四川文理学院专属样式 */
+#SCWL table,
+#CDLG table {
+	margin: 20px auto;
+}
+#SCWL .ts {
+	text-align: -webkit-center;
+	font-weight: 600;
+}
+#SCWL .content div,
+#SCDD .content div,
+#CDLG .content div {
+	position: relative;
+	left: -202px;
+	z-index: 3;
+}
+/* 四川大学专属样式 */
+div#LOGO a {
+	/* z-index: 2; */
+	width: 150px;
+	height: 150px;
+}
+#SCDX h5 {
+	line-height: 30px;
+	margin: 20px auto;
+}
+#SCDX h6 {
+	font-size: 16px;
+}
+#SCDX #zf p:nth-child(1) {
+	margin-top: 0px;
+}
+#SCDX .content {
+	text-align: left;
+	position: relative;
+	/* height: 328px; */
+}
+#SCDX .content::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+#SCDX .content dd a {
+	color: #000;
+}
+#SCDX .content dd a:hover {
+	color: #f10215;
+}
+#SCDX div.content dl:nth-child(n) {
+	text-indent: 0px;
+	margin-right: 88px;
+}
+#SCDX div.content dl:nth-child(1) {
+	position: relative;
+	/* top: -20px; */
+	left: 66px;
+	z-index: 2;
+}
+/* #SCDX div.content dl:nth-child(2) {
+	top: -20px;
+	left: 296px;
+}
+#SCDX .content dl:nth-child(3) {
+	top: -20px;
+	left: 550px;
+} */
+/* 四川农业大学专属样式 */
+#SCNY table span {
+	color: #f10215;
+	font-weight: 600;
+	font-size: 17px;
+}
+#SCNY table {
+	margin-bottom: 30px ;
+}
+#SCNY #FJ {
+	line-height: 40px;
+	margin: 28px auto;
+	text-align: -webkit-left;
+}
+#SCNY .content div {
+	text-align: left;
+	position: relative;
+	left: 48px;
+}
+#SCNY .content a {
+	z-index: 3;
+}
+#SCNY h5 {
+	line-height: 40px;
+	margin-top: 168px;
+	border-top: 1px dashed #000;
+}
+/* 四川电大专属样式begin */
+#SCDD div.zhuan {
+	background-color: rgb(142,182,59);
+	border: 1px solid #0d0101;
+	width: 1000px;
+	/* height: 44px; */
+	margin: 6px auto;
+	box-sizing: border-box;
+}
+.zhuan p {
+	font-size: 26px;
+	margin: 8px auto;
+	text-align: center;
+	color: #fff;
+	line-height: 44px;
+}
+#SCDD table td:first-child {
+	width: 96px;
+}
+#SCDD table td:last-child {
+	text-align: left;
+}
+#SCDD .table {
+	margin-bottom: 3px;
+}
+/* 川北医学院begin */
+
+#CBYXY .code {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 10px auto;
+}
+#CBYXY table th:first-child {
+	width: 48px;
+}
+.tab #CBYXY {
+	margin: -3px auto;
+}
+
+
+
+/* 继续教育专属底部导航栏样式 */
+footer.footer .summary .copy {
+	margin-top: -6px;
+	top: -4px;
+}

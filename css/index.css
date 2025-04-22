@@ -1,0 +1,367 @@
+/* ��ҳר����ʽ 
+��ʼʱ�䣺2020.04.30.21.34
+���ߣ�����
+���ߣ�Editplus
+
+*/
+
+
+/* ---- �ֲ�ͼ��ʽbegin ---- */
+html{
+	/* ������ҳ���� */
+	/* filter: grayscale(1); */
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+img {
+  vertical-align: top;
+ }
+ .all {
+  width: 1000px;
+  height: 354.16px;
+  margin: 16px auto;
+  /* padding: 1px; */
+  border: 1px solid #ccc;
+  position: relative;
+ }
+ .inner {
+  position: relative;
+  width: 1000px;
+  height: 354.16px;
+  background-color: pink;
+  overflow: hidden;
+ }
+ .inner ul {
+  width: 1000%;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+ }
+ .inner ul img {
+	width: 1000px;
+ }
+ .inner ul li {
+  float: left;
+ }
+ .inner ol {
+  position: absolute;
+  right:404px;
+  bottom: 10px;
+  z-index: 1;
+ }
+ .inner ol li {
+  width: 22px;
+  display: inline-block;
+  height: 22px;
+  margin: 0 8px;
+  cursor: pointer;
+  line-height: 22px;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+ }
+ /*��ǰ�ĸ�����СԲ��*/
+.current::before {
+  content: "";
+  display: block;
+  clear: both;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  margin-left: -5px;
+  /* background: rgba(255,255,255,.2); */
+  border: 1px solid #fff;
+ }
+ /* ���㰴ť�ĺ��� */
+ .focusD {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: none;
+ }
+ /* ���еĽ��㰴ť����ʽ */
+ .focusD span {
+  display: inline-block;
+  width: 30px;
+  font-size: 24px;
+  height: 30px;
+  color: #000;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  z-index: 2;
+ }
+ /* ��߽��㰴ť */
+ #left {
+  left: 6px;
+ }
+ /* �ұ߽��㰴ť */
+ #right {
+  right: 6px;
+}
+
+/*  -- Ӫҵ��Χbegin --  */
+/* ����� */
+.service {
+	height: 600px;
+	position: relative;
+}
+/* �ö����� */
+.service .s_top {
+	width: 100%;
+	border-bottom: 1px solid #f2f2f2;
+}
+/* �ö������ڵ����� */
+.service .s_top p {
+	display: block;
+	font-size: 24px;
+	color: #f01215;
+	text-align: center;
+	line-height: 58px;
+	margin-bottom: -12px;
+}
+.service .s_top span {
+	border-bottom: 1px solid #f10215;
+	padding-bottom: 2px;
+}
+.service .s_top h2 {
+	font-size: 14px;
+	text-align: center;
+	color: #ccc;
+	font-weight: 400;
+	position: absolute;
+	top: 48px;
+	left: 446px;
+}
+.service .show {
+	height: 428px;
+	box-sizing: border-box;
+	position: relative;
+	top: 58px;
+	left: 0;
+}
+.service .show li {
+	width: 304px;
+	height: 160px;
+	position: absolute;
+	top: 0;
+	left: 18px;
+	cursor: pointer;
+	transition: all 0.4s;
+	cursor: pointer;
+	border: 1px solid #999;
+}
+.show li a {
+	text-decoration: none;
+}
+.service .show li:nth-child(2) {
+	top: 0;
+	left: 347px;
+}
+.service .show li:nth-child(3) {
+	top: 0;
+	left: 678px;
+}
+.service .show li:nth-child(4) {
+	top: 238px;
+	left: 18px;
+}
+.service .show li:nth-child(5) {
+	top: 238px;
+	left: 347px;
+}
+.service .show li:nth-child(6) {
+	top: 238px;
+	left: 678px;
+}
+.show li h2 {
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	margin: 48px 0 18px;
+}
+.show li h3 {
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 32px;
+}
+.show li img {
+	position: relative;
+	top: -190px;
+	left: 18px;
+}
+.show li:hover {
+	box-shadow: 0 2px 10px #ccc; /* ������������Ӱ */
+	transform: translateY(-22px);
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 0;
+}
+
+.service .bottom {
+	width: 200px;
+	height: 38px;
+	position: relative;
+	bottom: -86px;
+	left: 0;
+	margin: auto;
+}
+.service .bottom a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: url("http://www.xazedu.com/images/btnbg.png") 137px center no-repeat; 
+	background-color: #f96868;
+	text-align: center;
+	line-height: 38px;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 8px;
+}
+.service .bottom a:hover {
+	font-weight: 700;
+}
+
+/* ��˾����begin */
+ body .news {
+	height: 378px;
+	border: 1px solid green;
+	margin: 18px auto;
+	background:url("http://www.xazedu.com/images/bg2.jpg") -444px;
+}
+.news .title {
+	width:301px;
+	height: 82px;
+	background: url("http://www.xazedu.com/images/tit2.png") ;
+	margin: 8px auto 68px;
+	padding-top: 8px;
+}
+.news .title h1,
+.news .title h2 {
+	display: block;
+	color: #fff;
+	font-weight: 400;
+	text-align: center;
+
+}
+.news .title h1 {
+	font-size: 24px;
+	line-height: 46px;
+	margin-top: 10px;
+}
+.news .title h2 {
+display: block;
+	color: #fff;
+	font-weight: 400;
+	text-align: center;
+	font-size: 24px;
+	margin: 10px 0 8px;
+}
+.title h6{
+	text-align: center;
+	font-size: 14px;
+	color: rgb(97 30 30);
+}
+/* չʾ��ʱ���� */
+.news .text {
+	height: 200px;
+}
+.news .text ol {
+	display: flex;
+}
+.text ol li {
+	width: 486px;
+	height: 74px;
+	background-color: #fff;
+	float: left;
+	margin: 0 9px 28px 10px;
+}
+.text li .l {
+	float: left;
+}
+.text li span {
+	height: 64px;
+	width: 82px;
+	display: block;
+	border-right: 1px solid #ccc;
+	text-align: center;
+	margin:  5px 15px 0 0;
+	color: #f10215;
+}
+.text li span b {
+	font-size: 34px;
+}
+/* �Ҳ���Ϣչʾ�� */
+.text li .r,
+.text li .rr {
+	float: right;
+	/* border: 1px solid red; */
+	/* margin: 8px 56px 0 0 ; */
+	position: relative;
+	top: 18px;
+	left: -20px;
+}
+.text .r a,
+.text .rr a {
+	font-size: 14px;
+	font-weight: 400;
+}
+.text .r a:hover,
+.text .rr a:hover{
+	color: #f10215;
+	text-decoration: underline; 
+}
+.text .r p,
+.text .rr p {
+	font-size: 14px;
+	line-height: 40px;
+}
+.text li .x {
+	/* margin: 8px 22px 0 0 ; */
+	/* margin: 8px 22px 0 0 ; */
+	position: relative;
+	top: 17px;
+	left: -20px;
+}
+.text li .xr {
+	left: -48px;
+}
+.actGotop {
+      position: fixed;
+      bottom: 30px;
+      right: 10px;
+      width: 150px;
+      height: 195px;
+      display: none;
+      z-index: 100;
+    }
+    
+    .actGotop a, .actGotop a:link {
+      width: 150px;
+      height: 195px;
+      display: inline-block;
+      background: url(../images/gotop.png) no-repeat;
+      outline: none;
+    }
+    
+    .actGotop a:hover {
+      width: 150px;
+      height: 195px;
+      background: url(../images/gotop.gif) no-repeat;
+      outline: none;
+    }

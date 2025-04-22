@@ -1,0 +1,134 @@
+/* 教务教学专用样式begin */
+
+/* 主体部分begin */
+body div.nav {
+	width: 68px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid red;
+	background-color: #fff;
+	position: relative;
+	top: -6px;
+	left: 20px;
+	z-index: 2;
+}
+div.nav a {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	text-indent: 10px;
+	color: #f10215;
+	z-index: 3;
+}
+div.nav a:hover {
+	color: #fff;
+	font-weight: 600;
+	background-color: red;
+}
+
+div .service {
+	height:1500px;
+}
+.service .s_top #yw {
+	margin-top: 50px;
+}
+div.service .s_top h2 {
+	position: absolute;
+	top: 52px;
+	left: 412px;
+}
+/* 业务展示模块begin */
+.zkmk .p {
+	font-size: 18px;
+	font-weight: 600;
+	margin: 16px auto;
+	text-indent: 18px;
+}
+.show dl p {
+	font-size: 16px;
+	font-weight: 600;
+	text-indent: -18px;
+}
+.show .zkmk {
+	/* border: 1px solid red; */
+	margin: 20px auto;
+	box-shadow: 0px 2px 5px #969696;;
+	padding: 10px;
+}
+.show .zkmk dl {
+	margin: 0 28px 0 38px;
+	width: 150px;
+	line-height: 30px;
+	letter-spacing: 2px;
+	float: left;	/* 右浮动 */
+}
+/* 清除浮动 */
+.show .zkmk::after {
+	content:'';		/* 设置为空的属性 */
+	height: 0;		/* 伪元素无高度 */
+	clear: both;	/* 清除浮动 */
+	display: block; /* 显示伪元素 */
+}
+/* 当鼠标悬停在超链接上时的样式 */
+dl a:hover {
+	color: #f10215;		/* 颜色 */
+	text-decoration: underline;	/* 添加下划线 */
+}
+
+.mokuai::after {
+	content: "";
+	height: 44px;
+	clear: both;
+	display: block;
+}
+/*  -- 营业范围begin --  */
+/* 大盒子 */
+.mokuai {
+	position: relative;
+}
+/* 置顶盒子 */
+.mokuai .s_top {
+	width: 100%;
+	border-bottom: 1px solid #f2f2f2;
+}
+/* 置顶盒子内的文字 */
+.mokuai .s_top p {
+	display: block;
+	font-size: 30px;
+	color: #f01215;
+	text-align: center;
+	line-height: 58px;
+	margin-bottom: -12px;
+	letter-spacing: 10px;
+}
+.mokuai .s_top span {
+	border-bottom: 1px solid #f10215;
+	padding-bottom: 2px;
+}
+.mokuai .s_top h2 {
+	font-size: 18px;
+	text-align: center;
+	color: #7c7a7a;
+	font-weight: 400;
+	position: absolute;
+	top: 52px;
+	left: 395px;
+}
+.mokuai .show {
+	height: 428px;
+	box-sizing: border-box;
+	position: relative;
+	top: 58px;
+	left: 0;
+}
+.mokuai .show li {
+	width: 304px;
+	height: 160px;
+	position: absolute;
+	top: 0;
+	left: 18px;
+	cursor: pointer;
+	transition: all 0.4s;
+	cursor: pointer;
+	border: 1px solid #999;
+}

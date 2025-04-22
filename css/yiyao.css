@@ -1,0 +1,170 @@
+/* 医药专用样式 */
+/* 导航栏医师专属格式 */
+
+/* 广告宣传专用 */
+.top_img {
+	background: url("../images/zhiyeyiszhaop.jpg") 0px 0px;
+	position: relative;
+}
+.top_img s {
+	position: absolute;
+	top: 48px;
+	left: 90px;
+	text-shadow: 3px 2px 3px #f96868; 
+}
+div.top_img i {
+	margin: 23px 0 0 140px;
+	color: #f10215;
+	letter-spacing: 4px;
+	text-shadow: -1px -1px 2px #f10215;
+	font-size: 16px;
+}
+
+#main label {
+	width: 116px;
+}
+.content a {
+	color: #136ec2;
+}
+.content a:hover {
+	text-decoration: underline;
+	color: #f10215;
+}
+
+/* 政策解读begin */
+.yishi {
+	/* border: 1px solid pink; */
+	margin: 20px auto;
+	padding-bottom: 20px;
+}
+.yishi .content {
+	margin: 12px auto;
+}
+.yishi .content::after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.yishi .content .p {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.yishi h2 {
+	font-size: 24px;
+	line-height: 68px;
+	margin-top: 44px;
+}
+.yishi .content dl {
+	line-height: 34px;
+	margin: 0 32px 0;
+	font-size: 16px;
+	text-align: left;
+	text-indent: 2em;
+	float: left;
+}
+
+.yishi dl:nth-child(6) {
+	position: relative;
+	top: 66px;
+	left: -175px;
+}
+
+.yishi dl:nth-child(7) {
+	position: relative;
+	top: -92px;
+	left: 174px;
+}
+.yishi dl:last-child {
+	position: relative;
+	top: -58px;
+	left: 0;
+}
+
+.yishi dl dd {
+	font-size: 14px;
+	line-height: 30px;
+	margin-left: 24px;
+}
+.yishi dd a {
+	color: #000;
+}
+
+.yishi h4 {
+	font-size: 20px;
+	text-align: left;
+	line-height: 68px;
+	text-indent: -30px;
+}
+
+table {
+	margin: 14px;
+}
+table th,
+table td {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 8px 6px;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+	padding: 2px 14px 2px 22px;
+	text-align: left;
+}
+
+/* 中西医专享样式 */
+.zhongxiyi {
+	padding: 10px 0;
+}
+
+.zhongxiyi h2,
+.hushi h2 {
+	line-height: 100px;
+	font-size:	26px;
+	position: relative;
+	top: 20px;
+}
+
+.zhongxiyi .td {
+	width: 84px;
+}
+.zhongxiyi table th:nth-child(3) {
+	width: 68px;
+}
+.zhongxiyi table th:nth-child(4) {
+	width: 73px;
+	text-align: center;
+}
+#tese {
+	width: 110px;
+    text-align: right;
+    font-weight: 600;
+    color: #f10215;
+}
+#tese i {
+	font-family: "icomoon";
+	font-size: 18px;
+	position: relative;
+	left: -6px;
+	top: 2px;
+}
+
+/* 护理专项样式 */
+.hushi {
+	padding-bottom: 10px;
+}
+
+.hushi .style,
+.hushi .style p {
+	font-size: 13px;
+}
+
+.hushi .style p {
+	text-indent: 38px;
+	line-height: 20px;
+}
+.hushi table {
+	margin: auto;
+}

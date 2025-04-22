@@ -1,0 +1,116 @@
+/*这是统招专属样式格式*/
+    div.new {
+        height: 30px;
+        background-color: #efefef;
+        margin: 18px auto 12px;
+    }
+    .new p {
+        font-size: 14px;
+        color: #f10215;
+        letter-spacing: 1px;
+    }
+    .new p i {
+        font-family: 'icomoon';
+        font-size: 20px;
+        color: #f96868;
+        position: relative;
+        left: -8px;
+        margin-right: 10px;
+    }
+    /* 展示区域的盒子样式 */
+    div.box {
+        /* height: 500px; */
+        /* border: 1px solid #eae6e6; */
+    }
+    /* 盒子中的按钮，用来切换的 */
+    #box-btn {
+        width: 100%;
+        height: 44px;
+        /* border: 1px solid blue; */
+        background-color: #32bff5;
+    }
+    #box-btn p {
+        width: 150px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        /* border: 1px solid yellow; */
+        float: left;
+        text-indent: 0;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 8px 0 0;
+    }
+    /*当鼠标进入的时候，给当前焦点添加该样式*/
+    .block {
+        color: #fff;
+        font-weight: 600;
+        background-color: #ff9800;
+        /* border-bottom: 1px solid rgb(247, 45, 45); */
+        box-shadow: 0 2px 0 rgba(247,45,45);
+    }
+
+    /* 每一个单独的文本内容的样式 */
+    .box .textBox {
+        width: 100%;
+        /* border: 1px solid blue; */
+        position: relative;
+        margin-bottom: 1px;
+    }
+    .textBox div {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .textBox .show {
+        display: block;
+    }
+
+    /* 各详细页面的公共样式 */
+    .textBox h2 {
+        height: 200px;
+        width: 100%;
+        font-size: 44px;
+        text-align: center;
+        line-height: 200px;
+        /* 字间距 */
+        letter-spacing: 10px;
+    }
+    .textBox h4 {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+        position: relative;
+        left: -30px;
+        margin: 20px auto;
+        /* 转换成行内块模式， */
+        display: inline-block;
+    }
+    .textBox table {
+        margin: 8px auto;
+        text-align: center;
+    }
+    .textBox table th {
+        height: 44px;
+        padding: 0 10px;
+        font-size: 18px;
+        background-color: #5d8bc0;
+        
+    }
+    .textBox table th,td {
+        color: #000;
+    }
+table caption {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+/* 兰州外语职业学院特殊样式 */
+.textBox .table th{
+    padding: 4px 70px;
+}
+.baomin {
+    color: #000;
+    font-weight: 400;
+    display: none;
+}

@@ -1,0 +1,40 @@
+/* 公司简介专用样式 */
+/*
+时间起：2020.08.11
+时间止：
+创作人：飞鱼
+
+*/
+body div.service {
+	height: 520px;
+}
+div.service .s_top h2 {
+	color: #f10215;
+	position: absolute;
+	top: 52px;
+	left: 432px;
+}
+h3 {
+	line-height: 108px;
+	font-size: 26px;
+	text-align: center;
+	text-shadow: 3px 2px 4px rgba(174,170,170);
+	letter-spacing: 4px;
+	margin-top: 34px;
+}
+/* .jj {
+	border: 1px solid red;
+} */
+.jj .s {
+	font-weight: 600;
+	text-indent: 0px;
+	font-size: 18px;
+}
+.ss {
+	font-weight: 600;
+	text-indent: 2em;
+	font-size: 16px;
+}
+p {
+	text-indent: 2em;
+}

@@ -1,0 +1,82 @@
+/*
+
+*/
+
+/* 职称专属页面begin */
+
+/* 广告位背景图片 */
+.top_img {
+    background: url("../images/zhiyeyiszhaop.jpg") 0px 0px;
+    position: relative;
+}
+.top_img s {
+	position: absolute;
+	top: 48px;
+	left: 90px;
+}
+div.top_img i {
+	margin: 19px 0 0 108px;
+	letter-spacing: 6px;
+}
+
+/* 卫生职称体系专属样式begin */
+.zhichen .content::after {
+	content: '';
+	clear: both;
+	height: 0;
+	display: block;
+}
+.zc table th,
+.zc table td {
+	padding: 8px 40px;
+}
+.zc table th:first-child {
+	width: 162px;
+}
+.zc table span {
+	color: orange;
+}
+ table thead {
+	background-color: orange;
+}
+table thead th{
+	color: #fff;
+	letter-spacing: 4px;	/* 字间距 */
+}
+.zhichen table thead th{
+	color: #000;
+	font-size: 14px;
+}
+.zhichen table thead {
+	background-color: #fff;
+}
+.tab h2 {
+    font-size: 24px;
+    line-height: 70px;
+    margin-top: 58px;
+    letter-spacing: 10px;
+}
+ table caption {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 40px;
+	letter-spacing: 6px;
+ }
+ .br {
+	margin-bottom: 20px;
+ }
+/* 初级护师专属样式begin */
+.hs table th,
+.hs table td {
+	padding: 8px 30px 8px 6px;
+}
+.hs table th:nth-child(n) {
+	margin-left: 28px;
+}
+/* 护师职称专属样式begin */
+.zhichen h5 {
+	line-height: 30px;
+	font-size: 18px;
+	text-indent: 30px;
+	text-align: -webkit-left;
+}

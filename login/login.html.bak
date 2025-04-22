@@ -1,0 +1,103 @@
+<!doctype html><!--声明文档类型为html5标准网页-->
+<html lang="en"><!--网页使用语言为英语-->
+ <head><!--网页头部 储存网站名字、搜索引擎、网站介绍-->
+	<meta charset="UTF-8"><!--设置字符代码（UTF-8万国码）防止乱码-->
+	<!--   引入ico图标 -->
+	<link rel="shortcut icon" href="../LOGO.ico" type="image/x-icon" />
+
+	<title>数据库登陆</title><!--网页名字 标题标签-->
+	<style>/*css样式表*/
+		*{/*通配符 企业网页不建议使用*/
+			margin:0;
+			padding:0;
+		}
+
+		html,body{
+			height:100%/*浏览器高度*/
+		}
+
+		body{
+			display:flex;/*弹性盒模型*/
+			justify-content:center;/*主轴方向：居中*/
+			align-items:center;/*副轴方向：居中*/
+		/*背景复合样式：图片路径 让照片不被平铺 图片的位置/拖图片大小*/
+			background: url(../images/1.jpg) no-repeat center/cover;
+		}
+
+		.login{
+			width:300px;/*宽度*/
+			height:300px;/*高度*/
+			background-color:#fff;/*背景颜色 原谅绿*/
+			border-radius: 8px;/*css3圆角属性*/
+		}
+
+		.login:before{
+			display:block;/*元素转换为冰（固态）*/
+			content:'';
+			width:100%;/*宽度*/
+			height:10px;/*高度*/
+			background-image:-webkit-linear-gradient(left,rgb(39,174,96)0%,rgb(39,174,96)20%,rgb(142,68,173)20%,rgb(142,68,173)40%,rgb(52,152,219)40%,rgb(52,152,219)60%,rgb(231,76,60)60%,rgb(231,76,60)80%,rgb(241,196,15)80%,rgb(241,196,15)100%);/*css3渐变色*/
+			border-radius:8px 8px 0 0;/*css3圆角属性*/
+		}
+
+		.title{/*选择器*/
+			font-size:2em;/*文字大小*/
+			line-height:80px;/*行高*/
+			text-align:center;/*文本对齐方式：居中*/
+			color:#096;/*字体颜色*/
+		}
+
+		.login-content{
+			display:flex;/*弹性盒模型*/
+			flex-direction: column;/*改变主轴方向*/
+			justify-content:space-around;/*均分剩余空间*/
+			align-items:center;/*副轴 居中*/
+			height:200px;/*高度*/
+			background-color:#096；
+		}
+
+		.login-content input{
+			width:80%;/*宽度*/
+			height:40px;/*高度*/
+			border:2px solid #ccc;/*边框属性 粗细 样式 颜色*/
+			text-indent:1em;/*首行缩进 1个em（浏览器默认em=16px）*/
+			border-radius:10px;/*圆角属性*/
+			outline:none;/*去除默认蓝色边框*/
+		
+		}
+
+		.login-content input[type="submit"]{/*直接选择某个类名*/
+			text-indent:0;/*文本缩进*/
+			background-color:#ff6600;/*背景颜色*/
+			color:#fff;/*文本颜色*/
+			font-size:20px;
+		}
+
+	</style>
+ </head>
+ <body><!--网站身体 展示给用户的-->
+	<div class="login"><!--盒子标签-->
+		<h2 class="title">Login</h2>
+		<form class="login-content"action="" method="post" ><!-- action地址（常用于链接数据库） 前后端交互-->
+			<input type="text" placeholder="请输入用户名" name="off" id="user" name="user"><!--文本（这里表示账号）-->
+			<input type="password" placeholder="请输入密码" id="pwd" name="pwd"><!--这里表示密码-->
+			<input type="submit" value="Sign In" onclick="login()"><!--提交按钮 名字是（sign in）-->
+		</form>
+	
+	</div>
+
+	<script>
+		function login(){
+			var pwd=document.getElementById('pwd').value;
+			var user=document.getElementById('user').value;
+		if(user=="admin" && pwd=="admin"){
+			alert(window.location.href="http://em-1253478384.cos-website.ap-chengdu.myqcloud.com/question/list");
+			
+		}else{
+			alert("用户名或密码错误");
+		}
+		;
+	}
+	</script>
+ </body>
+</html>

@@ -1,0 +1,81 @@
+/*
+作者：飞鱼
+begin：2020.07.31
+end：
+
+*/
+/* 执业药师专属页面begin */
+
+/* 广告位背景图片 */
+.top_img {
+    background: url("../images/zhiyeyiszhaop.jpg") 0px 0px;
+    position: relative;
+}
+.top_img s {
+	position: absolute;
+	top: 48px;
+	left: 90px;
+}
+div.top_img i {
+	margin: 19px 0 0 108px;
+	letter-spacing: 6px;
+}
+div label {
+	width: 144px;
+}
+/* 政策解读begin */
+.zc h2,
+.tab h2 {
+	font-size: 24px;
+	line-height: 70px;
+	margin-top: 58px;
+	letter-spacing: 10px; /* 字间距 */
+}
+/* 目录样式 */
+.zc .content {
+	margin-top: 14px;
+}
+.zc .content::after {	/* 伪元素：给目录盒子后面插入一个伪元素盒子 */
+	content:"";	/* 添加一个空的盒子 */
+	display: block;	/* 意思是显示伪元素 */
+	height: 0;	/* 高度为无 */
+	clear: both;	/* 清除浮动 */
+	visibility: hidden;	
+}
+.zc .content::after {
+	*zoom: 1;
+}
+.tab .bg td:first-child {
+	width: 88px;
+}
+.tab .bg td:nth-child(3) {
+	width: 148px;
+}
+.tab .bg .money {
+	font-size: 16px;
+	position: relative;
+	left: -14px;
+}
+.tab .bg span {
+	font-size: 14px;
+	color: #f10215;
+	font-weight: 600;
+}
+.tab a {
+	font-size: 12px;
+	text-decoration: underline;
+}
+/* 健康管理师专属样式begin */
+.tab .gls td:last-child {
+	width: 108px;
+}
+.tab .gls td:nth-child(3) {
+	width:312px;
+}
+.bg table thead {
+	background-color: orange;
+}
+.bg thead th{
+	color: #fff;
+	letter-spacing: 4px;	/* 字间距 */
+}

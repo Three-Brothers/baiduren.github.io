@@ -1,0 +1,343 @@
+/*承载内容的盒子的label公共样式表 */
+
+/*
+时间起：2020.05.5
+时间止：
+创作人：飞鱼
+
+*/
+
+
+
+/* 顶部logo样式小改 */
+div.top-logo img {
+	margin-top: -52px;
+}
+
+/* 顶部导航栏也要修改 */
+div.nav ul li {
+	margin: 0 51px 0 18px;
+}
+/* 主体样式修改 */
+body {
+	overflow-X: hidden;
+}
+
+/* 每页广告样式设置 */
+.top_img {
+	height: 174px;
+    padding-top: 60px;
+}
+.top_img s {
+	text-decoration: none;	/* 取消删除线 */
+    color: #f96868;	/* 设置字体颜色 */
+	font-size: 34px; /* 字体大小 */
+	text-shadow: 3px 2px 3px #f96868;  /* 文字阴影 */
+}
+.top_img i {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    margin: 12px 0 0 63px;
+	text-shadow: -1px -1px 2px #f10215;
+}
+/* 弹幕广告样式begin */
+.new {
+    position: relative;
+    top: 14px;
+    left: 6px;
+    height: 30px;
+    background-color: #efefef;
+}
+.new p {
+    font-size: 14px;
+    color: #f10215;
+    position: relative;
+    top: 0px;
+    left: 0px;
+	letter-spacing: 3px;
+}
+.new p i {
+    font-family: 'icomoon';
+    font-size: 20px;
+    color: #f96868;
+    position: relative;
+    left: -8px;
+    margin-right: 10px;
+}
+
+/* 以下为label的公共样式 */
+/* 底部专属样式 */
+.footer .summary .copy {
+	position: relative;
+	top: -10px;
+}
+#tab {
+	top: 36px;
+	left: 320px;
+}
+.s {
+	font-weight: 600;
+	margin: 10px 0;
+}
+ .ss {
+	color: red;
+	font-weight: 600;
+	margin: 8px 0;
+}
+p {
+	font-size: 16px;	/* 字体大小 */
+	width: 100%;	/* 继承父盒子宽度 */
+	line-height: 28px;	/* 行高 */
+	text-align: left;	/* 文本对齐方式-居左 */
+	text-indent: 2em;	/* 文本缩进大小-2字符 */
+}
+span {
+	color: blue;	/* 字体颜色 */
+	font-weight: 500;	/* 字体样式，加粗 */
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+.content {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.content p {
+	font-size: 18px;
+	font-weight: 600;
+}
+.content a {
+	color: #136ec2;
+}
+.content dd a {
+	color: #000;
+}
+.content a:hover {
+	text-decoration: underline;
+	color: #f10215;
+}
+
+.content dl {
+	line-height: 34px;
+	margin: 0 32px 0;
+	font-size: 16px;
+	text-align: left;
+	text-indent: 2em;
+	float: left;
+}
+.content dd {
+	line-height: 30px;
+	margin-left: 34px;
+}
+/* 用label构件一个大的框架 */
+
+#main{		/* 展示盒子的大框架 */
+	width: 1060px;	/* 大盒子的宽度 */
+    margin: 28px auto 0;	/* 外边距样式 */
+    border: 1px solid #999;	/* 边框样式 */
+    background-color: #32bff5;	/* 背景色 */
+	overflow: hidden;	/* 溢出即隐藏 */
+}
+label{		/* 第一排的按钮样式 */
+    display: inline-block;	/* 转化元素为行内块 */
+    cursor: pointer;	/* 添加鼠标样式为小手 */
+    height: 42px;	/* 高度 */
+    line-height: 52px;	/* 行高 */
+    font-size: 16px;	/* 字体大小 */
+	width: 100px;	/* 宽度 */
+    text-align: center;	/* 文本对齐方式-居中 */
+    margin: 0 28px;	/* 外边距的样式 */
+}
+
+.radio{
+    margin: 0;	/* 外边距，清除 */
+    display: none;	/* 盒子隐藏 */
+}
+
+.radio:nth-of-type(1):checked~label:nth-of-type(1){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+/* 控制第一个盒子的高度 */
+.radio:nth-of-type(1):checked~.tab:nth-of-type(1){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(2):checked~label:nth-of-type(2){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+
+.radio:nth-of-type(2):checked~.tab:nth-of-type(2){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(3):checked~label:nth-of-type(3){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(3):checked~.tab:nth-of-type(3){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(4):checked~label:nth-of-type(4){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(4):checked~.tab:nth-of-type(4){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(5):checked~label:nth-of-type(5){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(5):checked~.tab:nth-of-type(5){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(6):checked~label:nth-of-type(6){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(6):checked~.tab:nth-of-type(6){
+    display: block;	/* 盒子显示 */
+}
+
+.radio:nth-of-type(7):checked~label:nth-of-type(7){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(7):checked~.tab:nth-of-type(7){
+    display: block;	/* 盒子显示 */
+}
+
+.radio:nth-of-type(8):checked~label:nth-of-type(8){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(8):checked~.tab:nth-of-type(8){
+    display: block;	/* 盒子显示 */
+}
+
+.radio:nth-of-type(9):checked~label:nth-of-type(8){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(9):checked~.tab:nth-of-type(8){
+    display: block;	/* 盒子显示 */
+}
+
+.radio:nth-of-type(10):checked~label:nth-of-type(10){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(10):checked~.tab:nth-of-type(10){
+    display: block;	/* 盒子显示 */
+}
+
+.tab{
+    display: none;	/* 盒子隐藏 */
+    width: 100%;	/* 宽度继承 */
+    font-size: 24px;	/* 字体大小 */
+    text-align: center;	/* 文本对齐方式-居中 */
+    line-height: 240px;	/* 行高 */
+    border-top: 1px solid #d8d8d8;	/* 底部的颜色 */
+    background-color: #fff;	/* 背景色 */
+} 
+/*
+label专属样式完结,
+针对全部label盒子的样式，
+各详细页面的样式单独写即可。
+*/
+
+/* 各类型展示区域版心 */
+.edu {
+	width: 1000px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+.edu #LOGO {
+	height: 150px;
+	width: 150px;
+	position: relative;
+	top: 16px;
+	left: 58px;
+}
+#LOGO h2 {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#LOGO p {
+	text-indent: -999px;
+}
+#LOGO a {
+	display: block;
+	heoght: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#LOGO img {
+	width: 150px;
+}
+
+.edu h3 {
+	font-size: 22px;
+	line-height: 0;
+	position: relative;
+	top: -20px;
+	left: 46px;
+}
+
+/* 各学校表格表头样式 */
+.text th,
+.text td{
+	font-size: 16px;
+	line-height: 20px;
+	padding: 6px 20px;
+}
+/* 表格内文本对齐方式样式 */
+table#DQ {	/* 设置id-固定该id为左对齐特性 */
+	text-align: left;	/* 文本对齐方式-居左 */
+}
+
+table th,
+table td {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 6px;
+}
+
+/* 各单页H4统一格式begin */
+h4 {
+	font-size: 20px;
+	text-align: left;
+	line-height: 68px;
+	text-indent: -30px;
+}

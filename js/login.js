@@ -1,0 +1,14 @@
+function login(){
+	var pwd=document.getElementById('pwd').value;var user=document.getElementById('user').value;
+	if(user =="admin" && pwd =="admin"){
+		/*window.location.href="https://192.168.0.114:8080/#/question/list";*/
+		window.open("http://192.168.0.114:8080/#/question/list");  
+		/*window.open("https://www.baidu.com");*/
+		}else{
+			alert("账号或密码错误，请重新输入");
+		}
+	}
+/*
+http://em-1253478384.cos-website.ap-chengdu.myqcloud.com/question/list
+上面链接为原数据库的在线数据库链接
+*/

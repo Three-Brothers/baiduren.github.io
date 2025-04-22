@@ -1,0 +1,523 @@
+/* 自考专属样式展示 */
+/*
+时间起：2020.05.04
+时间止：
+创作人：飞鱼
+
+*/
+
+
+
+
+/* 展示盒子begin */
+
+/* 该盒子的做法：【新技能-新拓展】
+首先：应用input表单来制作，在没有学习到JS的时候，该方法很实用
+其次：代码思路
+纯css实现多页签跳转效果的核心就是通过label绑定单选按钮radio实现不同页签的选中与否的状态，
+在这里第一个想到的问题应该是为什么效果图中没有看到有单选按钮是吧，因为单选按钮被隐藏了。
+在点击每个label的时候，被label绑定的radio就会被选中，由于所有radio的name属性相同，
+所以在同一时间只会有一个radio 被选中。然后通过页签的选中控制相关内容的显示与隐藏，
+这样就轻松的实现了页签之间的跳转。相信说到这里很多人已经明白了，
+不明白也没关系，接着看下面。
+
+最大的限制是页面布局的限制。要想完完全全通过css实现多页签的跳转，
+页面的radio标签必须是与内容块是平级的或是与内容块的父级是同级的，
+因为是要通过radio的checked状态来找到相应的内容块从而通过控制内容块的显示与隐藏。
+
+
+
+因为在css中是无法通过子元素取到父元素的，
+所以就无法通过radio来找到header元素也就无法找到相应的tab元素，也就无法实现效果。
+
+
+当看不懂的时候，可到<"https://blog.csdn.net/qq_38453189/article/details/75681029">中再次学习观摩
+
+*/
+div.nav ul li {
+	margin: 0 51px 0 18px;	/* 重新定义顶部导航栏的左右外边距 */
+}
+.footer .summary .copy {
+	position: relative;
+	top: -10px;
+}
+div.top-logo img {
+	margin-top: -52px;	/* 距离上外边距 */
+}
+body {
+	overflow-X: hidden;	/* 禁止横向轴（X）出现滚动条 */
+}
+
+/* 给表格后面加一个空白的盒子，和底部的线条隔开 */
+body .k {
+	height: 20px;	/* 高度 */
+}
+.policy {
+	margin: 26px 0;	/* 外边距：上下26像素，左右0 */
+	color: blue;	/* 颜色:蓝色 */
+	text-indent: 0;	/* 首行缩进 */
+	font-size: 14px;	/* 文字大小：14像素 */
+}
+
+/* #tab {
+	top: 36px;	顶部36像素
+	left: 320px;	距左的距离
+} */
+p {
+	font-size: 16px;	/* 字体大小 */
+	width: 100%;	/* 继承父盒子宽度 */
+	line-height: 26px;	/* 行高 */
+	text-align: left;	/* 文本对齐方式-居左 */
+	text-indent: 2em;	/* 文本缩进大小-2字符 */
+}
+span {
+	color: blue;	/* 字体颜色 */
+	font-weight: 500;	/* 字体样式，加粗 */
+}
+
+a {
+	text-decoration: none;	/* 取消下划线 */
+ }
+
+/*自考页专用图片 */
+.top_img {
+	height: 174px;	/* 高度 */
+	background: url("http://www.xazedu.com/images/add.jpg") 0 0 no-repeat;	/* 背景图片 */
+	padding-top: 60px;	/* 内上边距 */
+}	
+
+.top_img s {
+	text-decoration: none;	/* 取消删除线 */
+	color: #f96868;	/* 字体颜色 */
+	font-size: 34px;	/* 字体大小 */
+	padding-left: 68px;	/* 左内边距 */
+}
+
+.top_img i {
+	display: block;	/* 转换为块元素 */
+	font-size: 14px;	/* 字体大小 */
+	color: #fff;	/* 字体颜色 */
+	margin: 12px 0 0 63px;	/* 外边距的设置 */
+}
+
+/* 通知消息（自考专用） */
+
+.news {
+	height: 30px;	/* 高度 */
+	background-color: #efefef;	/* 背景颜色 */
+	position: relative;	/* 相对定位 */
+	top: 18px;
+	left:-4px;
+}
+
+.news p {
+	font-size: 13px;	/* 文字大小 */
+	color: #f10215;		/* 字体颜色 */
+	letter-spacing: 1px;	/* 字间距 */
+}
+
+.news p i {
+	font-family:'icomoon';	/* 设置字体图标初始化 */
+	font-size: 20px;	/* 文字大小 */
+	color: #f96868;		/* 字体颜色 */
+	position: relative;	/* 相对定位 */
+	left: -8px;
+	margin-right: 10px;/* 右外边距 */
+}
+#main{		/* 展示盒子的大框架 */
+	width: 1060px;	/* 大盒子的宽度 */
+    margin: 38px auto 0;	/* 外边距样式 */
+    /* border: 1px solid #999; */	/* 边框样式 */
+    background-color: #32bff5;	/* 背景色 */
+	overflow: hidden;	/* 溢出即隐藏 */
+}
+label{		/* 第一排的按钮样式 */
+    display: inline-block;	/* 转化元素为行内块 */
+    cursor: pointer;	/* 添加鼠标样式为小手 */
+    height: 42px;	/* 高度 */
+    line-height: 52px;	/* 行高 */
+    font-size: 16px;	/* 字体大小 */
+	width: 100px;	/* 宽度 */
+    text-align: center;	/* 文本对齐方式-居中 */
+    margin: 0 28px;	/* 外边距的样式 */
+}
+
+.radio{
+    margin: 0;	/* 外边距，清除 */
+    display: none;	/* 盒子隐藏 */
+}
+
+.radio:nth-of-type(1):checked~label:nth-of-type(1){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+/* 控制第一个盒子的高度 */
+.radio:nth-of-type(1):checked~.tab:nth-of-type(1){
+    display: block; /* 盒子显示 */
+	/* height: 6300px; */	/* 设置第一个盒子的高度 */
+}
+
+.radio:nth-of-type(2):checked~label:nth-of-type(2){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+
+.radio:nth-of-type(2):checked~.tab:nth-of-type(2){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(3):checked~label:nth-of-type(3){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(3):checked~.tab:nth-of-type(3){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(4):checked~label:nth-of-type(4){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(4):checked~.tab:nth-of-type(4){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(5):checked~label:nth-of-type(5){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(5):checked~.tab:nth-of-type(5){
+    display: block; /* 盒子显示 */
+}
+
+.radio:nth-of-type(6):checked~label:nth-of-type(6){
+    color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(6):checked~.tab:nth-of-type(6){
+    display: block;	/* 盒子显示 */
+}
+.radio:nth-of-type(7):checked~label:nth-of-type(7){
+	 color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(7):checked~.tab:nth-of-type(7){
+	display: block;/* 显示盒子 */
+}
+.radio:nth-of-type(8):checked~label:nth-of-type(8){
+	 color: #fff;	/* 字体颜色 */
+    border-bottom: 2px solid #fbd100;	/* 添加底部颜色 */
+    font-weight: bold;	/* 字体加粗 */
+	background-color: #ff9800;	/* 背景色 */
+}
+.radio:nth-of-type(8):checked~.tab:nth-of-type(8){
+	display: block;/* 显示盒子 */
+}
+
+.tab{
+    display: none;	/* 盒子隐藏 */
+    width: 100%;	/* 宽度继承 */
+    font-size: 24px;	/* 字体大小 */
+    text-align: center;	/* 文本对齐方式-居中 */
+    line-height: 240px;	/* 行高 */
+    border-top: 1px solid #d8d8d8;	/* 底部的颜色 */
+    background-color: #fff;	/* 背景色 */
+}
+/* 以下是自考专用的内容填充 */
+div.main .index_z {
+	height: 6200px;	/* 高度 */
+}
+.index_z .zklogo {
+	width: 160px;	/* 宽度 */
+	height: 160px;	/* 高度 */
+	overflow: hidden;	/* 溢出隐藏 */
+	cursor: pointer;	/* 设置鼠标样式为小手 */
+	position: relative;	/* 相对定位 */
+	top: 28px;
+	left: 28px;
+}
+.index_z .zklogo h2 {
+	margin-left: -999px;	/* 外左边距为 */
+	
+}
+.zklogo h2 img {
+	width: 160px; /* 宽度 */
+	z-index: 1;	/* 层级为1 */
+	position: absolute;	/* 绝对定位 */
+	top: 0;
+	left: 0;
+}
+
+.text .zk {
+	width: 1000px;	/* 宽度 */
+	/* border: 1px solid red; */
+	position: relative;	/* 相对定位 */
+	top: -114px;
+	left: 0;
+	margin: 0 auto;	/* 外边距上下为零,左右居中 */
+}
+
+.index_z .text h3 {
+	width: 600px;	/* 宽度 */
+	height: 200px;	/* 高度 */
+	font-size: 42px;	/* 字体大小 */
+	position: relative;	/* 相对定位 */
+	top: -165px;
+	left: 318px;
+}
+.text .img {
+	height: 432px;	/* 高度 */
+}
+.text .img h5 {
+	height: 99px;	/* 高度 */
+	line-height: 139px;	/* 行高 */
+}
+.text .img img,
+#ZSMB img {
+	width: 438px;	/* 宽度 */
+	margin-right: 20px;	/* 右外边距 */
+}
+
+.text .content {
+	width: 100%;	/* 宽度继承父元素 */
+	height: 60px;	/* 高度 */
+	border: 1px solid #ccc;	/* 边框 */
+	position: relative;	/* 相对定位 */
+	top: -144px;
+	left: -1px;
+}
+.content div {
+	line-height: 24px;
+}
+.text .content a {
+	display: inline-block;	/* 转换样式为行内块 */
+	font-size: 16px;	/* 字体大小 */
+	line-height: 20px;	/* 行高 */
+	text-align: left;	/* 文本对齐方式 */
+	position: relative;	/* 相对定位 */
+	top: -18px;
+	margin-right: 40px;
+}
+
+.text .content p {
+	font-weight: 700;	/* 字体样式 */
+}
+.text .content a {
+	text-decoration: none;
+	color: #136ec2;
+}
+.text .content a:hover {
+	color: #f10215;
+	text-decoration: underline;
+}
+.index_z .text h4 {
+	font-size: 20px;
+	line-height: 24px;
+	text-align: left;
+	position: relative;
+	top: 0;
+	left:-30px;
+	margin: 20px auto;
+}
+.text table {
+	margin: auto;	/* 外边距居中 */
+
+}
+
+.text tr th {
+	line-height: 24px;	/* 行高 */
+	font-size: 18px;	/* 字体大小 */
+	padding: 10px;	/* 外边距 */
+}
+.text tr td {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 8px 12px;
+}
+
+.tab .set {
+	margin-top: 36px;
+}
+/* 当鼠标悬停在报名表上的a上时的样式 */
+.tab p a:hover {	
+	font-weight: 500;
+	color: #f10215;
+	text-decoration: underline;	/* 添加下划线 */
+}
+
+/* 第二页begin（西南科技大学） */
+.tab .xike {
+	width: 1000px;
+	margin: auto;
+}
+.tab .xike p:last-child {
+	font-weight: 700;
+	font-size: 18px;
+	margin: 10px;
+}
+.tab .xike .s {
+	font-size: 18px;
+	font-weight: 600;
+	margin: 10px 0 10px -68px;
+}
+.tab .xike .ss {
+	color: rgb(237,30,38);
+	margin: 8px 0 8px -33px;
+	font-weight: 600;
+}
+.tab .xike .ys {
+	color: #0a9cf1;
+	font-weight: 600;
+}
+
+/* 第三页-成都理工 */
+#major {
+	margin-top: 30px;
+}
+
+#major caption,
+#majo caption {
+	font-size: 28px;
+	line-height: 99px;
+	margin-top: 68px;
+	font-weight: 700;
+}
+
+/* 自考所有table专业设置表格样式 */
+table#major th,
+table#major td {
+	line-height:  22px;
+	font-size: 16px;
+	padding: 11px 16px;
+}
+
+/* 当有tr中有格子合并时，请调用tr-r来设置样式 */
+#major tr.tr-r td:nth-child(4){
+	color: #f10215;
+	font-weight: 600;
+}
+
+/* （选择第五个td进行样式设置） */
+#major .tr td:nth-child(5) {
+	color: #f10215;
+	font-weight: 600;
+}
+
+/* 理工专属样式（选择最后一个td） */
+#major .tr-l td:last-child {
+	color: #f10215;
+	font-weight: 600;
+}
+/* 西南科技大学专业设置表 */
+
+table#table caption {
+	height: 160px;
+	font-weight: 700;
+}
+
+table#table th {
+	line-height: 22px;
+	font-size: 16px;
+}
+table#table tr:first-child {
+	padding: 0;
+}
+table#table th:first-child {
+	padding: 16px 2px;
+}
+table#table td {
+	font-size: 14px;
+	line-height: 22px;
+	padding: 11px 18px;
+}
+
+/* 第四页begin（西南交大） */
+.tab div.jiao .s {
+	margin-left: -66px;
+}
+table#table tbody td.pass {
+	font-family:"icomoon";
+}
+
+table#table td.pass p{
+	margin-left: -28px;
+}
+.tab .bz {
+	font-weight: 600;
+	text-align: -webkit-center;
+	letter-spacing: 4px;
+	color: #f10215;
+	font-size: 18px;
+}
+.tab .red {
+	color: red;
+	font-weight: 600;
+}
+/* 成都信息工程大学 style */
+table#majo th,
+table#majo td {
+	line-height: 22px;
+	font-size: 16px;
+	padding: 11px 32px;
+	white-space: nowrap;/* 强制文字在一行内显示 */
+}
+.gcdx .img {
+	box-sizing: border-box;/* 防止内容撑开盒子，限定盒子的宽高 */
+	margin: 20px auto 0;
+}
+
+.gcdx .img h3 {
+	line-height: 40px; /* 行高 */
+	text-align: left;/* 对齐方式-居左 */
+	font-size: 20px; /* 字体大小 */
+	text-indent: 2em; /* 首行缩进2字符 */
+}
+.gcdx .img > div {
+	float: left;
+	margin-top: 10px;
+}
+.gcdx .img .right {
+	float: right;
+}
+.img div img {
+	width: 490px;
+}
+
+/* 针对学位申请条件的新增样式 */
+.tab .xuewei tr {
+	padding: 0;
+}
+.tab .xuewei th {
+	line-height: 20px;
+	padding: 4px 8px;
+	font-size: 18px;
+	font-weight: 700;
+}
+tab .xuewei th:nth-child(2){
+	width: 90px;
+}
+.tab .xuewei th:nth-child(3){
+	width: 350px;
+}
+.tab .xuewei th:last-child {
+	width: 150px;
+}
+.tab .xuewei td {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 4px 8px;
+}
